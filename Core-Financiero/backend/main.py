@@ -13,7 +13,12 @@ app = FastAPI(
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:5173"],  # React Vite frontend
+    allow_origins=[
+        "http://localhost:5173",
+        "http://localhost:5174",
+        "https://banco-gnb-peru-core.vercel.app",
+        "https://banco-gnb-peru-homebanking.vercel.app"
+    ],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
